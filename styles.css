@@ -1,3 +1,63 @@
-.container{
-    background-color: aqua;
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* variables */
+:root{
+
+    /* colors */
+    --color1: #1C1D21;
+    --color2: #A2D3C2;
+    --color3: #8c7284;
+    --color4: #f85e00;
+    --color5: #ffb563;
+    --text-color: hsl(0 0% 46%);
+
+    /* fonts */
+
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
+
+    --title-font:a;
+    --base-font:b;
+}
+
+/* base */
+html{
+    scroll-behavior: smooth;
+
+    background-color: var(--color2);
+}
+
+.container{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+/* nav */
+
+
+/* home */
+
+
+
+
+/*services */
+
