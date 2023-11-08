@@ -41,8 +41,6 @@ img {
 /* base */
 html{
     scroll-behavior: smooth;
-
-    background-color: var(--color2);
 }
 
 .container{
