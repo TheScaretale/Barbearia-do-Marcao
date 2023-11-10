@@ -22,11 +22,11 @@ img {
 :root{
 
     /* colors */
-    --color1: #1C1D21;
-    --color2: #A2D3C2;
-    --color3: #8c7284;
-    --color4: #f85e00;
-    --color5: #ffb563;
+    --preto: #1C1D21; /* Preto */
+    --cinza: #D1DDE8; /* Azul Alice */
+    --vermelho1: #C41D1D; /* Carro de bombeiros */
+    --vermelho2: #B80C09; /* Laranja de engenharia */
+    --ouro: #CBAB2A; /* Ouro Metalico */
     --text-color: hsl(0 0% 46%);
 
     /* fonts */
@@ -41,6 +41,7 @@ img {
 /* base */
 html{
     scroll-behavior: smooth;
+    background-color: var(--cinza);
 }
 
 .container{
@@ -50,7 +51,20 @@ html{
 
 
 /* nav */
+.container-nav{
+    background-color: var(--preto);
+}
 
+.logo{
+    color:white;
+    font: 700 var(--title-font-size) var(--title-font);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logo span{
+    color: var(--cinza);
+}
 
 /* home */
 
