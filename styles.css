@@ -92,3 +92,20 @@ html{
 
 /*services */
 
+
+/* footer */
+
+.logo-alt{
+    color: var(--cinza);
+    font: 700 var(--title-font-size) var(--title-font);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logo-alt span{
+    color: var(--preto);
+}
+
+.container-footer{
+    background-color: var(--ouro);
+}
