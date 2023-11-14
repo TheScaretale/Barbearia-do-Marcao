@@ -54,6 +54,11 @@ html{
     color: var(--cinza);
 }
 
+.text{
+    font-family: var(--base-font);
+
+}
+
 .divider-1 {
     height: 1px;
     background: linear-gradient(
@@ -96,16 +101,11 @@ html{
 }
 
 #header {
-    border-bottom: 1px solid #e4e4e4;
-    margin-bottom: 2rem;
     display: flex;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
     background-color: var(--preto);
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
 }
 
 #header .scroll{
@@ -115,20 +115,28 @@ html{
 
 /* nav */
 
-.container .menu{
-    
-    margin-left: 100px;
+.logo{
+    cursor:pointer;
 }
 
-.menu ul {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 50px;
-    gap: 1rem;
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
 }
-.menu ul > li a {
-    font-size: 1rem;
+
+.nav_links li a{
+    font-family: var(--base-font);
+    color: var(--cinza);
 }
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color:#CBAB2A;
+}
+
 
 
 
@@ -190,14 +198,3 @@ html{
 .container-footer{
     background-color: var(--ouro);
 }
-
-/* responsivo 
-
-@media(min-width:1200px){
-    .container{
-        max-width: 1120px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-}*/
