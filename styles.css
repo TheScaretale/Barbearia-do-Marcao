@@ -118,7 +118,7 @@ html{
 /* nav */
 
 .logo{
-    cursor:pointer;
+    cursor:default;
 }
 
 .nav_links li{
@@ -140,8 +140,6 @@ html{
 }
 
 
-
-
 /* card */
 
 .cards.grid {
@@ -161,9 +159,6 @@ html{
     margin-bottom: 0.75rem;
   }
 
-
-
-
 .logo{
     color:white;
     font: 700 var(--title-font-size) var(--title-font);
@@ -178,9 +173,29 @@ html{
 
 /* home */
 
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
 
+.image {
+    flex: 1;
+    padding: 20px;
+   }
 
+.image img{
+    height: 100px;
+    width: auto;
+}
 
+.button {
+    display: inline-block;
+    background-color: var(--ouro);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+   }
 /*services */
 
 
