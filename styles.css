@@ -219,3 +219,15 @@ html{
 .container-footer{
     background-color: var(--ouro);
 }
+
+.table .title{
+    color: var(--base-color);
+}
+
+th {
+    width: 300px;
+}
+
+.table th td {
+    font-family: var(--base-font);
+}
