@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="Icones/fonts/style.css">
 
+
+    <!-- Swiper -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- Fontes -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;600;700&family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
 
     <!--Nosso estilo-->
-    
     <link rel="stylesheet" href="styles.css">
     <title>Barbearia do Marcão</title>
 </head>
@@ -52,43 +56,12 @@
                </div>
             </div>
         </section>
-        <!--SERVIÇOS-->
         
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="Imagens/cabelo1.jpeg" alt="">
-            </div>
-            <div class="carousel-slide">
-                <img src="Imagens/cabelo2.jpeg" alt="">
-            </div>
-            <div class="carousel-slide">
-                <img src="Imagens/cabelo3.jpeg" alt="">
-            </div>
-            <div class="carousel-slide">
-                <img src="Imagens/cabelo4.jpeg" alt="">
-            </div>
-
-            <button class="prev" onclick="changeSlide(-1)">❮</button>
-            <button class="next" onclick="changeSlide(1)">❯</button>
-        </div>
-
+        <!--SERVIÇOS-->
 
         <section class="section" id="services">
             <div class="container">
-                <div class="cards grid">
-                    <div class="card">
-                        <img src="Imagens/WhatsApp Image 2023-11-08 at 14.21.56 (1).jpeg" alt="">
-                    </div>
-                    <div class="card">
-                        <img src="Imagens/WhatsApp Image 2023-11-08 at 14.21.56.jpeg" alt="">
-                    </div>
-                    <div class="card">
-                        <img src="Imagens/WhatsApp Image 2023-11-08 at 14.28.55.jpeg" alt="">
-                    </div>
-                    <div class="card">
-                    <img src="Imagens/Corte-de-Cabelo-Masculino-Com-Franja-4.jpg" alt="">
-                    </div>
-                </div>
+                
             </div>
         </section>
         <div class="divider-2"></div>
@@ -104,21 +77,19 @@
                     <div class="card">
                         <img src="Imagens/2.png" alt="">
                     </div>
-                    <div class="cards grid">
-                        <div class="card">
-                            <img src="Imagens/3.png" alt="">
-                        </div>
-                        <div class="card">
-                            <img src="Imagens/4.png" alt="">
-                        </div>
-                        <div class="card">
-                            <img src="Imagens/5.png" alt="">
-                        </div>
-                        <div class="card">
-                            <img src="Imagens/6.png" alt="">
-                        </div>
+                    <div class="card">
+                        <img src="Imagens/3.png" alt="">
+                    </div>
+                    <div class="card">
+                        <img src="Imagens/4.png" alt="">
+                    </div>
+                    <div class="card">
+                        <img src="Imagens/5.png" alt="">
+                    </div>
+                    <div class="card">
+                        <img src="Imagens/6.png" alt="">
+                    </div>
                 </div>
-
             </div>
         </section>
 
@@ -127,7 +98,7 @@
         <div class="sobre"></div>
         <section class="section" id="about">
             <div class="container">
-                <p>A Barbearia do Marcão é um lugar onde você pode relaxar e cuidar da sua aparência. Com uma
+                <p class="text">A Barbearia do Marcão é um lugar onde você pode relaxar e cuidar da sua aparência. Com uma
                      equipe de profissionais experientes, a barbearia oferece <br> serviços de corte de cabelo masculino, barba e design de barba.<br>   
                       Além disso, o ambiente é acolhedor e descontraído, perfeito para quem quer se sentir à vontade enquanto cuida da aparência.</p>
                 
@@ -185,7 +156,17 @@
     <a href="#" class="back-to-top"></a>
 
 
+    <!-- Swiper -->
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+          var swiper = new Swiper("mySwiper",{
+    pagination: {
+      e1: ".swiper-pagination"
+    }
+  })
+    </script>
 </body>
 </html>

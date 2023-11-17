@@ -49,7 +49,7 @@ window.addEventListener('scroll', function () {
   })
 
 
-  let currentSlide = 1;
+  /*let currentSlide = 1;
 
   function showSlide(n) {
     const slides = document.getElementsByClassName('carousel-slide');
@@ -70,5 +70,5 @@ window.addEventListener('scroll', function () {
   }
   
   // Show the first slide when the page loads
-  showSlide(currentSlide);
+  showSlide(currentSlide);*/
   

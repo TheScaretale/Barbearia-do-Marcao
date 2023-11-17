@@ -146,6 +146,9 @@ html{
 .cards.grid {
     gap: 1.5rem;
   }
+.cards{
+    grid-template-columns: 1fr 1fr;
+}
   
   .card {
     padding: 3.625rem 2rem;
@@ -167,6 +170,8 @@ html{
     font-weight: bold;
     margin: 10px 20px;
 }
+
+/* /card */
 
 .logo span{
     color: var(--cinza);
@@ -269,3 +274,24 @@ th {
 .table th td {
     font-family: var(--base-font);
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
