@@ -56,7 +56,6 @@ html{
 
 .text{
     font-family: var(--base-font);
-
 }
 
 .divider-1 {
@@ -171,6 +170,11 @@ html{
     color: var(--cinza);
 }
 
+.logoImg{
+    height: 70px;
+    width: 70px;
+    display: inline-flex;
+}
 /* home */
 
 .row{
@@ -184,7 +188,7 @@ html{
    }
 
 .image img{
-    height: 100px;
+    height: 320px;
     width: auto;
 }
 
