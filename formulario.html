@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de produtos</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" id="form">
+            <strong class="text">Descrição do produto:</strong>
+            <dl><dd>
+                <textarea name="descricao" cols="42" rows="5"></textarea>
+            </dd></dl>
+            <br>
+            <strong class="text">Selecione a unidade do produto:</strong>
+                <dl><dd>
+                    <input type="radio" name="Quilogramas" value="Quilogramas" checked> Quilogramas
+                    <input type="radio" name="Litros" value="Litros" checked> Litros
+                    <input type="radio" name="Grama" value="Grama" checked> Grama
+                </dd></dl>
+                <br>
+            <strong class="text">Informe a quantidade:</strong>
+            <dd><dl>
+                <input type="number" size="26" maxlength="256">
+            </dl></dd>
+            <br>
+            <strong class="text">Informe o valor:</strong>
+            <dd><dl>
+                <input type="number" size="26" maxlength="256">
+            </dl></dd>
+            <br>
+                <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,51 +1,22 @@
-/* menu */
+/* conexão */
+function cadastrarProdutos(){
+    document.getElementById('form').addEventListener('submit',function(e){
+      e.preventDefault();
 
-const nav = document.querySelector('#header nav')
-const toggle = document.querySelectorAll('nav .toggle')
+      var dadosForm = new FormData(this)
 
-for (const element of toggle) {
-  element.addEventListener('click', function () {
-    nav.classList.toggle('show')
-  })
-}
-
-const links = document.querySelectorAll('nav ul li a')
-
-for (const link of links) {
-  link.addEventListener('click', function () {
-    nav.classList.remove('show')
-  })
-}
-
-/* sombra do nav */
-
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-function changeHeaderWhenScrolled() {
-  if (window.scrollY >= navHeight) {
-    // altura do header maior que o scroll
-    header.classList.add('scroll')
-  } else {
-    // altura do header menor que o scroll
-    header.classList.remove('scroll')
+      fetch ('conn.php',{
+        method: 'POST',
+        body: dadosForm
+      }).then(response =>{
+        if(!response.ok){
+          throw new Error('Resposta da rede foi negativa.')
+        }
+        return response.text()
+      }).then(data =>{
+        console.log(data);
+      }).catch(error =>{
+        console.error("Ocorreu um problema no fetch")
+      })
+    })
   }
-}
-
-/* botão para voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top')
-function backToTop() {
-  if (window.scrollY >= 920) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
-}
-
-
-window.addEventListener('scroll', function () {
-    changeHeaderWhenScrolled()
-    backToTop()
-    activeMenuSection()
-  })
-
-
