@@ -8,20 +8,31 @@
 
    try{
        $banco = new PDO("mysql:host={$servidor};dbname=php",'root','');
+       $banco -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+            $descricao = $_POST['descricao'];
+            $unidade = $_POST['unidade'];
+            $quantidade = $_POST['quantidade'];
+            $valor = $_POST['valor'];
+
+            $querry = "INSERT INTO produtos(descricao,unidade,quantidade,valor) values (:descricao, :unidade,:quantidade, :valor);";
+            $stmt = $banco->prepare($querry);
+
+            $stmt -> bindParam(':descricao', $descricao);
+            $stmt -> bindParam(':unidade', $unidade);
+            $stmt -> bindParam(':quantidade', $quantidade);
+            $stmt -> bindParam(':valor', $valor);
+
+            if($stmt->execute()){
+                echo "Registro criado!";
+            }else{
+                echo "Erro ao inserir registro";
+            }
+        } else{
+            echo "Metodo incorreto";
+        }
    }catch(PDOException $e){
-       echo 'Banco de dados não encontrado.';
+       echo 'Erro' .$e->getMessage();
    }
-
-    $descricao = $_POST['descricao'];
-    $quantidade = $_POST['quantidade'];
-    $valor = $_POST['valor'];
-
-   $querry = "INSERT INTO produtos(descricao,quantidade,valor) values ('$descricao','$quantidade','$valor');";
-
-   if ($banco->query($querry) === TRUE){
-    echo "Novo registro criado";
-   }else{
-    echo "Erro: ".$sql."<br>".$banco->error;
-   }
-
-   $banco->close();

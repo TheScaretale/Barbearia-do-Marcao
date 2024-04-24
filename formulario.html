@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" id="form">
+        <form method="POST" id="form" action="conn.php">
             <strong class="text">Descrição do produto:</strong>
             <dl><dd>
                 <textarea name="descricao" cols="42" rows="5"></textarea>
@@ -16,19 +16,19 @@
             <br>
             <strong class="text">Selecione a unidade do produto:</strong>
                 <dl><dd>
-                    <input type="radio" name="Quilogramas" value="Quilogramas" checked> Quilogramas
-                    <input type="radio" name="Litros" value="Litros" checked> Litros
-                    <input type="radio" name="Grama" value="Grama" checked> Grama
+                    <input type="radio" name="unidade" value="Quilogramas"> Quilogramas
+                    <input type="radio" name="unidade" value="Litros"> Litros
+                    <input type="radio" name="unidade" value="Grama"> Grama
                 </dd></dl>
                 <br>
             <strong class="text">Informe a quantidade:</strong>
             <dd><dl>
-                <input type="number" size="26" maxlength="256">
+                <input type="number" name="quantidade" size="26" maxlength="256">
             </dl></dd>
             <br>
             <strong class="text">Informe o valor:</strong>
             <dd><dl>
-                <input type="number" size="26" maxlength="256">
+                <input type="number" name="valor" size="26" maxlength="256">
             </dl></dd>
             <br>
                 <input type="submit" value="Enviar">
